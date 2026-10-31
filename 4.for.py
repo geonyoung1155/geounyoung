@@ -45,6 +45,9 @@ class_scores = {
 }
 
 # 학생별 평균 점수
-for
+print("학생별 평균 점수")
+for name, score in class_scores.items():
+    average_list = {"김영희d", "이영희", "박민수", "정수진", "한동석"}
+
 
 # 과목별 최고 득점자
