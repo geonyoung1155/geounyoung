@@ -6,10 +6,33 @@ if True:
         print("False")
         print("False라면 내부는 모두 수행하지 않습니다.")
 
+if False:
+    print("Ture")
+    print("Ture라면 내부는 모두 수행합니다.")
+
+else: # !False = True:
+    print("else")
+    print("위 조건들이 True가 아닐때 조건이 실행됩니다.")
+
 print("Always")
 
-var1 = 119
-var2 = 119.000000001
+print("=====================")
+score = 90
+
+if score > 80:
+    print("A학점입니다.")
+elif score > 60:
+    print("B학점입니다.")
+elif score > 40:
+    print("C학점입니다.")
+elif score > 20:
+    print("D학점입니다.")
+else:
+    print("낙제입니다.")
+print("=====================")
+
+var1 = 0.999999999999999999
+var2 = 1
 
 if var1 > var2:
     print("var1이 더 큽니다.")
