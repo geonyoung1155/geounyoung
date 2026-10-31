@@ -8,3 +8,22 @@ if True:
 
 print("Always")
 
+var1 = 119
+var2 = 119.000000001
+
+if var1 > var2:
+    print("var1이 더 큽니다.")
+if var1 == var2:
+    print("var1과 var2가 같습니다.")
+if var1 < var2:
+    print("var2가 더 큽니다.")
+
+print("=====================")
+print("1. 게임 시작")
+print("2. 랭킹 확인")
+print("0. 게임종료")
+print("=====================")
+user_input = input("원하는 동작을 입력하세요")
+
+if user_input == "1":
+    print("게임을 시작합니다.")
