@@ -31,14 +31,14 @@ else:
     print("낙제입니다.")
 print("=====================")
 
-var1 = 0.999999999999999999
+var1 = 2
 var2 = 1
 
 if var1 > var2:
     print("var1이 더 큽니다.")
-if var1 == var2:
+elif var1 == var2:
     print("var1과 var2가 같습니다.")
-if var1 < var2:
+else:
     print("var2가 더 큽니다.")
 
 print("=====================")
@@ -50,3 +50,8 @@ user_input = input("원하는 동작을 입력하세요")
 
 if user_input == "1":
     print("게임을 시작합니다.")
+
+# 사용자에게 숫자와 연산자를 입력받아서 결과를 출력하는 프로그램
+number1 = input("첫번째 숫자를 입력하세요")
+number2 = input("두번째 숫자를 입력하세요")
+operator = input("연산자를 입력하세요 ")
