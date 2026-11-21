@@ -9,10 +9,11 @@ movies = [
 ]
 
 def retrieve_rating():
-   print("[평점 8.5 이상 영화]")
-   for movie in movies:
-      if movie["rating"] > 8.5:
-        print("- ", movie["title"])
+    user_input = float(input("평점 몇 이상의 영화를 조회하시겠습니까?"))
+    print("[평점",user_input," 이상 영화]")
+    for movie in movies:
+        if movie["rating"] > user_input:
+            print("- ", movie["title"])
 
 def retrieve_total_movie_views():
     total_animation_views = 0
