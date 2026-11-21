@@ -52,4 +52,4 @@ while True:
     elif choice == 3:
         retrieve_max_view_movie()
     else:
-        print("잘못된 입력입니다.")
+        print("잘못된 입력입니다!")
