@@ -1,5 +1,3 @@
-from ctypes.macholib.dyld import DEFAULT_LIBRARY_FALLBACK
-
 movies = [
     {"title": "인사이드 아웃 2", "genre": "애니메이션", "rating": 9.0, "views": 1500},
     {"title": "파묘", "genre": "미스터리", "rating": 8.2, "views": 2100},
@@ -83,7 +81,7 @@ def update_movie():
         movies.append(movie)
 
 
-
+    print(movies)
 
 
 while True:
