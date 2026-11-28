@@ -1,3 +1,4 @@
+
 movies = [
     {"title": "인사이드 아웃 2", "genre": "애니메이션", "rating": 9.0, "views": 1500},
     {"title": "파묘", "genre": "미스터리", "rating": 8.2, "views": 2100},
@@ -42,8 +43,9 @@ def search_movie_by_title(keyword):
 def search_movie_by_genre(keyword):
     searched_movies = []
     for movie in movies:
-        if movie["genre"] == keyword:
-           searched_movies.append(movie)
+        if "genre" in movie:
+            if movie["genre"] == keyword:
+                searched_movies.append(movie)
     print(keyword, "장르의 영화")
     print(searched_movies)
 
@@ -64,22 +66,19 @@ def external_api_update_movie():
 def update_movie():
     global movies
     updated_movies = external_api_update_movie()
-    # updated_movies가 기존 movies를 날리고 덮어쓰게됨
-    # movies = updated_movies
-    # updated_movies에서 신규 영화는 추가하고,
-    # 기존에 있던 영화만 값을 덮어쓰게
 
     for movie in updated_movies:
-       is_exist = False
-       for existing_movie in movies:
-          if movie["title"] == existing_movie["title"]:
-             movie["rating"] = existing_movie["rating"]
-             movie["views"] = existing_movie["views"]
-             is_exist = True
-             break
-    if is_exist == False:
-        movies.append(movie)
+        is_exist = False
 
+        for existing_movie in movies:
+            if movie["title"] == existing_movie["title"]:
+                existing_movie["rating"] = movie["rating"]
+                existing_movie["views"] = movie["views"]
+                is_exist = True
+                break
+
+        if is_exist == False:
+            movies.append(movie)
 
     print(movies)
 
